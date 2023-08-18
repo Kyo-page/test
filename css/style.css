@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@media screen and (max-width: 767px) {
+  .is-pc {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .is-sp {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1199.5px) and (min-width: 768px) {
+  .is-sp {
+    display: none !important;
+  }
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: #333333;
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*========================
+common
+========================*/
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    padding: 0 16px;
+  }
+}
+
+.btn-wrap {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 60px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 16px 90px 16px 64px;
+  display: inline-block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    font-size: 16px;
+    padding: 16px 57px 16px 48px;
+  }
+}
+
+.btn--green {
+  background: green;
+  border: 2px solid green;
+}
+.btn--green:hover {
+  background: #fff;
+  color: green;
+}
+@media screen and (max-width: 767px) {
+  .btn--green:hover {
+    background: green;
+    color: #fff;
+  }
+}
+.btn--green:hover .arrow::before {
+  border-color: green;
+}
+@media screen and (max-width: 767px) {
+  .btn--green:hover .arrow::before {
+    border-color: #fff;
+  }
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+}
+
+.arrow::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  position: absolute;
+  left: 10px;
+  top: -18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media screen and (max-width: 767px) {
+  .arrow::before {
+    width: 10px;
+    height: 10px;
+    top: -11px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #fff;
+  }
+}
+
+.arrow-right::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.element {
+  /* 最初は非表示 */
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s, visibility 1s, -webkit-transform 1s;
+  transition: opacity 1s, visibility 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s, visibility 1s;
+  transition: transform 1s, opacity 1s, visibility 1s, -webkit-transform 1s;
+  /* （装飾用スタイル） */
+  width: 80%;
+  height: 120px;
+  background-color: #ddd;
+}
+
+/* フェードイン時に入るクラス */
+.is-fadein {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.fuwa {
+  background: gray;
+  color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
