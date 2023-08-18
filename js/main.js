@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault(); // リンクのデフォルトの遷移をキャンセル
-            var delay = 200; // 遅延するミリ秒数（例: 3秒）
+            var delay = 100; // 遅延するミリ秒数（例: 3秒）
             setTimeout(function() {
                 window.location.href = link.getAttribute('href'); // 遷移を実行
             }, delay);
