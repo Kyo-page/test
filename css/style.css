@@ -107,19 +107,8 @@ common
   background: #fff;
   color: green;
 }
-@media screen and (max-width: 767px) {
-  .btn--green:hover {
-    background: green;
-    color: #fff;
-  }
-}
 .btn--green:hover .arrow::before {
   border-color: green;
-}
-@media screen and (max-width: 767px) {
-  .btn--green:hover .arrow::before {
-    border-color: #fff;
-  }
 }
 
 .arrow {
